@@ -1,0 +1,2 @@
+myword = 'test'
+print(myword)
