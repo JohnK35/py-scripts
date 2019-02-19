@@ -4,8 +4,8 @@ git add index.html
 git log
 
 git checkout <file> | restore file
-git reset index.html
-git reset --soft HEAD~1
+git reset index.html | restore file
+git reset --soft HEAD~1 | restore file
 git remove --cached index.html | remove git tracking
 
 git branch create_new_page | create new branch
@@ -18,3 +18,4 @@ git branch -d branch_name | del branch
 git remote add origin https://github.com/KAVTZ/Py4eg.git
 
 git remote -v | check status remote
+git remote rm destination
