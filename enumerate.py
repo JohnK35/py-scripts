@@ -1,7 +1,9 @@
-for i in range(len(L)):
-    item = L[i]
+name = "Name"
+surname = "Surname"
+for i in range(len(name)):
+    item = name[i]
     # ... compute some result based on item ...
-    L[i] = result
+    name[i] = result
 
 
 for i, item in enumerate(L):
