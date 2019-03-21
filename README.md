@@ -1,2 +1,1 @@
-for example python code
-by kajonsak
+Note to Self
