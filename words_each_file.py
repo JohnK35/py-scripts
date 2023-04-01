@@ -19,7 +19,27 @@ def getWords (pdf_path, pdf_name):
     for page in pdf_reader.pages:
         text += page.extract_text() 
         text += "\n"
-    words = word_tokenize(text)
+    REPLACEMENTS = [
+    ("\\", " "),
+    ("- ", " "),
+    ("•", " "),
+    ("/", " "),
+    ("(", " "),
+    (")", " "),
+    (":", " "),
+    (";", " "),
+    ("™", " "),
+    (".", " "),
+    ('”', " "),
+    ('“', " "),
+    ('©', " "),
+    ("–", "-"),
+    ("-\n", ""),
+    ]
+    textlow = text.lower()
+    for o, n in REPLACEMENTS:
+        textlow = textlow.replace(o, n)
+    words = word_tokenize(textlow)
     dist = FreqDist(words)
     for k, v in dist.items(): 
         result.append([k, v])
